@@ -4,18 +4,48 @@
 <head>
   <meta charset="utf-8">
   <title>Street View Side-By-Side</title>
-  <link href="./a.css" rel="stylesheet">
+  <link href="css/a.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="css/b.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container"></div>
-  <div class="button">
-    <button id="tokyo">神谷町</button>
-    <button id="yamaguchi">萩明倫館</button>
-    <button id="roma">ローマ</button>
-    <diV><button id="go">Go!!</button><button id="turn-right">right!!</button><button
-        id="turn-left">left!!</button><span id="onclick"></span></diV>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="./top.html">MESH GO!!</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse" style="width: 300px;">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./streetView.html">個人プレイ<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">チームプレイ</a>
+          </li>
+        </ul>
+      </div>
+      <div id="totalRun" class="totalrun"></div>
+      <div class="button">
+        <ul class="navbar-nav mr-auto">
+          <li><button id="tokyo" class="nav-item">神谷町</button></li>
+          <li><button id="yamaguchi" class="nav-item">萩明倫館</button></li>
+          <li><button id="roma" class="nav-item">ローマ</button></li>
+        </ul>
+      </div>
+      <a href="#"><img src="images/5183ef65b82a66cf573f324e59cf028b.png" style="color: white;" class="icon" height="40"></a>
+    </nav>
+  </header>
+
+  <div class="button abs">
+    <diV><button id="go">Go!!</button>
+    <button id="turn-right">right!!</button>
+    <!-- <button id="turn-left">left!!</button> -->
+  </diV>
   </div>
+
   <div id="map"></div>
   <div id="pano"></div>
 

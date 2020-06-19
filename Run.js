@@ -3,7 +3,7 @@ import { View } from "./View.js";
 
 export class Run {
     // 引数にpanoramaを渡す
-    static goFunc(panorama) {
+    static goFunc(panorama, location) {
         const view = new View();
         go.addEventListener('click', () => {
             var link = panorama.getLinks();
@@ -23,7 +23,16 @@ export class Run {
             });
             var pa = link[target]['pano'];
             panorama.setPano(pa);
+            // streetview オブジェクトを作成しcontainerに格納する
+            new google.maps.StreetViewPanorama(container, {
+                position: location,
+                pov: {
+                  heading: 180,
+                  pitch: 10
+                }
+              });
             view.counter();
+            // view.modal();
         });
     };
     static turnFunc(panorama) {

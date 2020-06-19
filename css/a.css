@@ -2,53 +2,65 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
   #map, #pano {
     float: left;
-    height: 80%;
     width: 50%;
+    height: 100%;
+    margin-top: 30px;
   }
   .button{
     text-align: center;
-    height: 15%;
-    margin-bottom: 3%;
     position:relative;
+    
   }
-  .text{
-      font-size: larger;
-      font-weight: bolder;
+  .abs{
+    position: absolute;
+  } 
+
+  .totalrun{
+    margin-right: 150px;
+    font-size: large;
+    color: white;
   }
+
   #tokyo, #yamaguchi, #roma{
-      height: 50%;
-      width: 30%;
+      height: 100%;
+      width: 100%;
       font-size: large;
       font-weight:bold;
-      background-color:lightcyan;
+      border: none;
+      background-color: transparent;
+      color: white;
+      margin-right: 50px;
   }
-  #go, #onclick{
-    font-size: 20px;
-    font-weight: bold;
-    font-style: oblique;
-    width: 20%;
-    padding: 30px;
-    border: snow;
+
+  #go, #turn-right{
+    border:white;
     background-color:white;
+    color: white;
   }
   .container{
       position: absolute;
       height: 100%;
       width: 100%;
-      z-index: 99;
+      z-index: 0;
       top: 0;
       left: 0;
       opacity:0;
       visibility: hidden;
-      animation: fadeIn 0.2;
   }
 
 
  .container.is-show{
     opacity: 1;
     visibility: visible;
+    z-index: 99;
+    width: 100%;
+}
+
+.icon{
+  height: 40px;
 }
 
