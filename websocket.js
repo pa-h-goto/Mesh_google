@@ -18,7 +18,7 @@ var webSocket = null;
         webSocket.onmessage = (ev) => {
             if (ev && ev.data) {
                 var msg = JSON.parse(ev.data);
-                if (msg.objectId == "sb_obj_251"){
+                if (msg.functionId == "AccelerationShake"){
                     var d = document.getElementById('go');
                     d.click();
                 } else{

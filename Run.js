@@ -38,7 +38,7 @@ export class Run {
     static turnFunc(panorama) {
         right.addEventListener('click', () => {
           var currentPov = panorama.getPov();
-          var newPov = currentPov.heading + 30
+          var newPov = currentPov.heading + 30;
           panorama.setPov({
             heading: newPov,
             pitch: 0
