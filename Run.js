@@ -6,7 +6,7 @@ export class Run {
     static goFunc(panorama, location) {
         const view = new View();
         go.addEventListener('click', () => {
-            var link = panorama.getLinks();
+            let link = panorama.getLinks();
             let val = 360;
             let target = 0;
             let currentPov = panorama.getPov();
@@ -21,7 +21,7 @@ export class Run {
                 heading: link[target].heading,
                 pitch: 0
             });
-            var pa = link[target]['pano'];
+            let pa = link[target]['pano'];
             panorama.setPano(pa);
             // streetview オブジェクトを作成しcontainerに格納する
             new google.maps.StreetViewPanorama(container, {

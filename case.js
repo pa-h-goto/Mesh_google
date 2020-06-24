@@ -46,11 +46,11 @@ button1.addEventListener('click', () => {
 button2.addEventListener('click', () => {
   let location = { lat: 34.409002, lng: 131.399754 };
 
-  var map = new google.maps.Map(mapEle, {
+  let map = new google.maps.Map(mapEle, {
     center: '東萩駅',
     zoom: 18
   });
-  var panorama = new google.maps.StreetViewPanorama(
+  let panorama = new google.maps.StreetViewPanorama(
     panoEle, {
     position: {lat: 34.416873, lng: 131.409275},
     pov: {
@@ -85,11 +85,11 @@ button2.addEventListener('click', () => {
 button3.addEventListener('click', () => {
   let location = {lat: 41.886626, lng: 12.507411};
 
-  var map = new google.maps.Map(mapEle, {
+  let map = new google.maps.Map(mapEle, {
     center: location,
     zoom: 18
   });
-  var panorama = new google.maps.StreetViewPanorama(
+  let panorama = new google.maps.StreetViewPanorama(
     panoEle, {
     position: location,
     pov: {
