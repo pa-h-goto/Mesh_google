@@ -1,6 +1,7 @@
 'use strict'
 import { View } from "./View.js";
 
+
 export class Run {
     // 引数にpanoramaを渡す
     static goFunc(panorama, location) {
